@@ -61,6 +61,7 @@ task('myTask', dependsOn: 'mustGoFirst') {
 
 release {
 
+    println "executing release task!!!"
     failOnCommitNeeded = false
 
 }
