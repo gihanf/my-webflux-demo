@@ -63,6 +63,7 @@ release {
 
     println "executing release task!!!"
     failOnCommitNeeded = false
+    println "almost finished release task!!!"
 
 }
 
