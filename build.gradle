@@ -1,0 +1,69 @@
+buildscript {
+	ext {
+		springBootVersion = '2.0.0.M7'
+	}
+	repositories {
+		mavenCentral()
+		maven { url "https://repo.spring.io/snapshot" }
+		maven { url "https://repo.spring.io/milestone" }
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+
+}
+
+plugins {
+    id 'net.researchgate.release' version '2.6.0'
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+task("generateApiDocumentation", dependsOn: 'classes', type: JavaExec) {
+    description "Generates API Blueprint documentation"
+    main = 'hello.APIBlueprintGenerator'
+    classpath = sourceSets.main.runtimeClasspath
+    args project.buildDir
+}
+
+repositories {
+	mavenCentral()
+	maven { url "https://repo.spring.io/snapshot" }
+	maven { url "https://repo.spring.io/milestone" }
+}
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-webflux')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	testCompile('io.projectreactor:reactor-test')
+}
+
+task("mustGoFirst") {
+    doLast {
+        println "I go first"
+    }
+}
+
+task('myTask', dependsOn: 'mustGoFirst') {
+    description "this is my custom task"
+    doLast {
+        println "I go second"
+        println "Finished my task"
+    }
+}
+
+release {
+
+    failOnCommitNeeded = false
+
+}
+
+
+//myTask.dependsOn mustGoFirst
