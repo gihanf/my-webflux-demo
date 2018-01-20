@@ -65,9 +65,9 @@ release {
 //    failOnUpdateNeeded = true
 //    revertOnFail = true
 //    preCommitText = ''
-//    preTagCommitMessage = '[Gradle Release Plugin] - pre tag commit: '
+    preTagCommitMessage = '[Gradle Release Plugin] - releasing version '
 //    tagCommitMessage = '[Gradle Release Plugin] - creating tag: '
-//    newVersionCommitMessage = '[Gradle Release Plugin] - new version commit: '
+    newVersionCommitMessage = '[Gradle Release Plugin] - preparing next development version: '
 //    tagTemplate = '${version}'
 //    versionPropertyFile = 'gradle.properties'
 //    versionProperties = []
