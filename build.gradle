@@ -81,15 +81,15 @@ release {
 //            net.researchgate.release.HgAdapter,
 //            net.researchgate.release.BzrAdapter
 //    ]
-
-    git {
-        requireBranch = 'iss1'
-        pushToRemote = 'origin'
-        pushToBranchPrefix = ''
-        commitVersionFileOnly = false
-        signTag = false
-    }
-
+//
+//    git {
+//        requireBranch = 'iss1'
+//        pushToRemote = 'origin'
+//        pushToBranchPrefix = ''
+//        commitVersionFileOnly = false
+//        signTag = false
+//    }
+//
 //    svn {
 //        username = 'gihanf'
 //        password = null
