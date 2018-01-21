@@ -82,13 +82,13 @@ release {
 //            net.researchgate.release.BzrAdapter
 //    ]
 
-//    git {
-//        requireBranch = 'master'
-//        pushToRemote = 'origin'
-//        pushToBranchPrefix = ''
-//        commitVersionFileOnly = false
-//        signTag = false
-//    }
+    git {
+        requireBranch = 'iss1'
+        pushToRemote = 'origin'
+        pushToBranchPrefix = ''
+        commitVersionFileOnly = false
+        signTag = false
+    }
 
 //    svn {
 //        username = 'gihanf'
