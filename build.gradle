@@ -81,7 +81,7 @@ release {
 //            net.researchgate.release.HgAdapter,
 //            net.researchgate.release.BzrAdapter
 //    ]
-
+// 
 //    git {
 //        requireBranch = 'master'
 //        pushToRemote = 'origin'
