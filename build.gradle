@@ -83,7 +83,7 @@ release {
 //    ]
 //
 //    git {
-//        requireBranch = 'iss1'
+//        requireBranch = 'master'
 //        pushToRemote = 'origin'
 //        pushToBranchPrefix = ''
 //        commitVersionFileOnly = false
