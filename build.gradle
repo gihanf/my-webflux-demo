@@ -58,7 +58,7 @@ task('myTask', dependsOn: 'mustGoFirst') {
 }
 
 release {
-    failOnCommitNeeded = false
+//    failOnCommitNeeded = false
 //    failOnPublishNeeded = true
 //    failOnSnapshotDependencies = true
 //    failOnUnversionedFiles = true
